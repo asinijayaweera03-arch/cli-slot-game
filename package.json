@@ -1,21 +1,21 @@
 {
   "name": "cli-slot-game",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-  "cli-slot-game": "./index.js"
+    "cli-slot-game": "./index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC", 
+  "license": "ISC",
   "type": "module",
   "dependencies": {
-  "chalk": "^5.6.2",
-  "figlet": "^1.11.0",
-  "inquirer": "^14.0.2"
+    "chalk": "^5.6.2",
+    "figlet": "^1.11.0",
+    "inquirer": "^14.0.2"
   }
 }
