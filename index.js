@@ -62,9 +62,36 @@ async function playRound() {
   }
 }
 
+function showInstructions() {
+  const border = chalk.yellowBright("═".repeat(48));
+  const side = chalk.yellowBright("║");
+
+  console.log(border);
+  console.log(side + chalk.bold.whiteBright("  🎰  HOW TO PLAY ") + " ".repeat(27) + side);
+  console.log(border);
+  console.log(side + "                                                " + side);
+  console.log(side + chalk.cyanBright("  Symbols: ") + SYMBOLS.join("  ") + "              " + side);
+  console.log(side + "                                                " + side);
+  console.log(side + chalk.bold.whiteBright("  Rules:") + "                                        " + side);
+  console.log(side + chalk.green("    🎯 3 matching symbols  → Win 10x your bet") + " " + side);
+  console.log(side + chalk.green("    🎯 2 matching symbols  → Win  2x your bet") + " " + side);
+  console.log(side + chalk.red("    ❌ No match            → Lose your bet")     + "    " + side);
+  console.log(side + "                                                " + side);
+  console.log(side + chalk.bold.whiteBright("  How it works:") + "                                 " + side);
+  console.log(side + chalk.gray("    1. Enter your bet amount") + "                    " + side);
+  console.log(side + chalk.gray("    2. Watch the reels spin") + "                     " + side);
+  console.log(side + chalk.gray("    3. Match symbols to win!") + "                    " + side);
+  console.log(side + "                                                " + side);
+  console.log(side + chalk.magentaBright("  💰 Starting balance: $100") + "                     " + side);
+  console.log(side + chalk.magentaBright("  🏆 Go for the JACKPOT (3 of a kind)!") + "          " + side);
+  console.log(side + "                                                " + side);
+  console.log(border);
+  console.log();
+}
+
 async function play() {
   banner("Slots", "cyanBright");
-  console.log(chalk.gray("Starting balance: $100\n"));
+  showInstructions();
 
   while (balance > 0) {
     await playRound();
